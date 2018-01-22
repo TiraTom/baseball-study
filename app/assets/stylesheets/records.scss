@@ -1,3 +1,18 @@
 // Place all the styles related to the records controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.container {
+    h2.title {
+        width: 100%;
+        margin: 0 auto;
+    }
+    div.pitcher {
+        float: left;
+        width: 50%;
+    }
+    div.batter {
+        float:right;
+        width: 50%;
+    }
+}

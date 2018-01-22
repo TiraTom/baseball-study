@@ -1,12 +1,9 @@
-# README
+メイン目的：スクレイピングの勉強、開発の勉強
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+サブ目的：ヤクルトスワローズの情報をちょっと集めてみる
 
 * Ruby version
-
+2.4.0
 * System dependencies
 
 * Configuration

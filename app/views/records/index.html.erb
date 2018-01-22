@@ -1,55 +1,72 @@
-<h3>ピッチャーランキング</h3>
-<h5>防御率</h5>
-<% @era_info.each do |era| %>
-    <div>
-        <span><%= era[0] %></span>
-        <span><%= era[1] %></span>
+<div class="container">
+    <h2 class="title">2017成績ランキング</h2>
+    <div class="pitcher">
+        <h3>ピッチャーランキング</h3>
+        <h5 class="item">防御率(規定投球回数以上の選手のみ）</h5>
+        <% @era_info.each do |era| %>
+            <% if era[1] != 99999 %>
+                <div>
+                    <span><%= era[0] %></span>
+                    <span>
+                        <%= era[1] %>
+                    </span>
+                </div>
+            <% end %>
+        <% end %>
+        
+        <h5 class="item">ホールド数</h5>
+        <% @hold_info.each do |hold| %>
+            <div>
+                <span><%= hold[0] %></span>
+                <span><%= hold[2] %></span>
+            </div>
+        <% end %>
+        
+        <h5 class="item">セーブ数</h5>
+        <% @save_info.each do |save| %>
+            <div>
+                <span><%= save[0] %></span>
+                <span><%= save[3] %></span>
+            </div>
+        <% end %>
+            
+        <h5 class="item">勝率</h5>
+        <% @win_info.each do |win| %>
+            <div>
+                <span><%= win[0] %></span>
+                <span><%= win[4] %></span>
+            </div>
+        <% end %>
     </div>
-<% end %>
-
-<h5>ホールド数</h5>
-<% @hold_info.each do |hold| %>
-    <div>
-        <span><%= hold[0] %></span>
-        <span><%= hold[2] %></span>
+    <div class="batter">
+        <h3>バッターランキング</h3>
+        <h5 class="item">打率</h5>
+        <% @batting_rate_info.each do |rate| %>
+            <div>
+                <span><%= rate[0] %></span>
+                <span><%= rate[1] %></span>
+            </div>
+        <% end %>
+        <h5 class="item">打席数</h5>
+        <% @batting_number_info.each do |number| %>
+            <div>
+                <span><%= number[0] %></span>
+                <span><%= number[2] %></span>
+            </div>
+        <% end %>
+        <h5 class="item">安打数</h5>
+        <% @ops_info.each do |hit| %>
+            <div>
+                <span><%= hit[0] %></span>
+                <span><%= hit[3] %></span>
+            </div>
+        <% end %>
+        <h5 class="item">OPS</h5>
+        <% @ops_info.each do |ops| %>
+            <div>
+                <span><%= ops[0] %></span>
+                <span><%= ops[4] %></span>
+            </div>
+        <% end %>
     </div>
-<% end %>
-
-<h5>セーブ数</h5>
-<% @save_info.each do |save| %>
-    <div>
-        <span><%= save[0] %></span>
-        <span><%= save[2] %></span>
-    </div>
-<% end %>
-    
-<h5>勝率</h5>
-<% @win_info.each do |win| %>
-    <div>
-        <span><%= win[0] %></span>
-        <span><%= win[2] %></span>
-    </div>
-<% end %>
-
-<h3>バッターランキング</h3>
-<h5>打率</h5>
-<% @batting_rate_info.each do |rate| %>
-    <div>
-        <span><%= rate[0] %></span>
-        <span><%= rate[2] %></span>
-    </div>
-<% end %>
-<h5>OPS</h5>
-<% @ops_info.each do |ops| %>
-    <div>
-        <span><%= ops[0] %></span>
-        <span><%= ops[2] %></span>
-    </div>
-<% end %>
-<h5>打席数</h5>
-<% @batting_number_info.each do |number| %>
-    <div>
-        <span><%= number[0] %></span>
-        <span><%= number[2] %></span>
-    </div>
-<% end %>
+</div>
