@@ -3,16 +3,18 @@
     <div class="pitcher">
         <h3>ピッチャーランキング</h3>
         <h5 class="item">防御率(規定投球回数以上の選手のみ）</h5>
-        <% @era_info.each do |era| %>
-            <% if era[1] != 99999 %>
-                <div>
-                    <span><%= era[0] %></span>
-                    <span>
-                        <%= era[1] %>
-                    </span>
-                </div>
+        <table>
+            <% @era_info.each do |era| %>
+                <% if era[1] != 99999 %>
+                    <tr>
+                        <td><%= era[0] %></td>
+                        <td>
+                            <%= era[1] %>
+                        </td>
+                    </tr>
+                <% end %>
             <% end %>
-        <% end %>
+        </table>
         
         <h5 class="item">ホールド数</h5>
         <% @hold_info.each do |hold| %>
