@@ -1,0 +1,62 @@
+<h3><%= @player.name %></h3>
+
+<table>
+	<tr>
+		<th clas="col-2">aaa</th>
+	</tr>
+	<tr>
+		<td> 
+			SEBANGOU
+		</td>
+		<td>
+			<% @player.numbers.number %>
+		</td>	
+	</tr>
+	<tr>
+		<td> 
+			POSITION
+		</td>
+		<td>
+			<% @position %>
+		</td>	
+	</tr>	
+	<tr>
+		<td> 
+			PRICE
+		</td>
+		<td>
+			<% player.prices.price %>
+		</td>	
+	</tr>
+	<% @status.each do |info| %>
+	<tr>
+		<td> 
+			<%= info.year %>
+		</td>
+		<td>
+			<%= info.value  %>
+		</td>	
+	</tr>
+	<tr>
+		<td> 
+			SEBANGOU
+		</td>
+		<td>
+			<% player.numbers.number %>
+		</td>	
+	</tr>
+</table>
+
+<div class="playersSong">
+	<%= @player.songs.song %>
+</div>
+
+<div class="funsActivity">
+	<ul>
+		<% @funs_activities.each do |activity| %>
+			<li>
+				<%= activity %>
+			</li>
+		<% end %>
+	</ul>
+</div>
