@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180204115029) do
+ActiveRecord::Schema.define(version: 20180204121636) do
 
-  create_table "batter_records", force: :cascade do |t|
+  create_table "BatterRecord", force: :cascade do |t|
     t.string "name", null: false
     t.float "rate", default: 0.0
     t.integer "number", default: 0
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20180204115029) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pitcher_records", force: :cascade do |t|
+  create_table "PitcherRecord", force: :cascade do |t|
     t.string "name", null: false
     t.float "era", default: 999.0
     t.integer "hold", default: 0
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20180204115029) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "players", force: :cascade do |t|
+  create_table "Player", force: :cascade do |t|
     t.string "name", null: false
     t.string "img"
     t.integer "enterYear", null: false
