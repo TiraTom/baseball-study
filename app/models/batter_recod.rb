@@ -1,0 +1,2 @@
+class BatterRecod < ApplicationRecord
+end

@@ -1,6 +1,5 @@
 class PlayersController < ApplicationController
-	#I'm not sure the way to connect a helper to a controller
-	include :players_helper
+    include PlayersHelper
 
 	def index
 		@all_players = Player.all
@@ -13,8 +12,7 @@ class PlayersController < ApplicationController
 	end
 
 	def edit
-		#only the user who has the correct password can edit the information of the player
-
+		#パスワード式にしてみたい
 	end
 
 end
