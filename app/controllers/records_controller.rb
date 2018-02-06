@@ -15,9 +15,11 @@ class RecordsController < ApplicationController
     
     #成績ページのデータの再取得
     def reload
+        byebug
         #ページ全体のデータ取得
         pitcher_all_records = get_pitcher_all_records
         batter_all_records = get_batter_all_records
+        byebug
         
         #DBに成績データ格納
         save_pitchers_info(pitcher_all_records)

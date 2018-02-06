@@ -1,0 +1,2 @@
+class PitcherRecord < ApplicationRecord
+end
