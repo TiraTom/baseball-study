@@ -1,0 +1,2 @@
+class BatterStatus < ApplicationRecord
+end

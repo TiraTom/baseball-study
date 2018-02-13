@@ -2,16 +2,14 @@
 
 one:
   name: MyString
+  rate: 1.5
   number: 
-  price: 
-  position: MyString
-  bat: 
-  image: MyString
+  hit: 
+  opt: 1.5
 
 two:
   name: MyString
+  rate: 1.5
   number: 
-  price: 
-  position: MyString
-  bat: 
-  image: MyString
+  hit: 
+  opt: 1.5

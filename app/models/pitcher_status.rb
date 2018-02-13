@@ -1,0 +1,2 @@
+class PitcherStatus < ApplicationRecord
+end
