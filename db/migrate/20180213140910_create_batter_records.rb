@@ -1,6 +1,6 @@
-class CreateBatterStatuses < ActiveRecord::Migration[5.1]
+class CreateBatterRecords < ActiveRecord::Migration[5.1]
   def change
-    create_table :batter_statuses do |t|
+    create_table :batter_records do |t|
       t.string :name, null:false
       t.float :rate, default: 0
       t.integer :number

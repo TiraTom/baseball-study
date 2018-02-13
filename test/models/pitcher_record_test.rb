@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PitcherStatusTest < ActiveSupport::TestCase
+class PitcherRecordTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

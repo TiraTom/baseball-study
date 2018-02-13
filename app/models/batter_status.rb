@@ -1,2 +1,0 @@
-class BatterStatus < ApplicationRecord
-end
