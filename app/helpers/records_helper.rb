@@ -41,9 +41,9 @@ module RecordsHelper
             end
             #セーブ数
             if player.css("td")[13].text == "---"
-                pitcher_info.saves = 0
+                pitcher_info.save_num = 0
             else
-                pitcher_info.saves = player.css("td")[13].text.to_i
+                pitcher_info.save_num = player.css("td")[13].text.to_i
             end
             #勝率
             if player.css("td")[14].text == "---"
@@ -51,8 +51,7 @@ module RecordsHelper
             else
                 pitcher_info.win = player.css("td")[14].text.to_f
             end
-            byebug
-            pitcher_info.save
+            pitcher_info.save!
         end
     end
     
@@ -70,7 +69,7 @@ module RecordsHelper
             batter_info.hit = player.css("td")[5].text.to_i
             #OPS
             batter_info.ops = player.css("td")[21].text.to_f
-            batter_info.save
+            batter_info.save!
         end
     end
     

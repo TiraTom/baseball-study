@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20180213140910) do
     t.float "rate", default: 0.0
     t.integer "number"
     t.integer "hit", default: 0
-    t.float "opt", default: 0.0
+    t.float "ops", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

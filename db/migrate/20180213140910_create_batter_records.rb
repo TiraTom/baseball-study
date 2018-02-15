@@ -5,7 +5,7 @@ class CreateBatterRecords < ActiveRecord::Migration[5.1]
       t.float :rate, default: 0
       t.integer :number
       t.integer :hit, default: 0
-      t.float :opt, default: 0
+      t.float :ops, default: 0
 
       t.timestamps
     end
