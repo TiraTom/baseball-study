@@ -3,16 +3,15 @@ class RecordsController < ApplicationController
     
     def index 
         #DBからデータ読み出し
-        byebug
-        @era_info = pitchers_info.order(:era)[0..2]
-        @hold_info = pitchers_info.order(hold: :asc)[0..2]
-        @save_info = pitchers_info.order(save_num: :asc)[0..2]
-        @win_info = pitchers_info.order(win: :asc)[0..2]
-        @batting_rate_info = batters_info.order(rate: :asc)[0..2]
-        @batting_number_info = batters_info.order(number: :asc)[0..2]
-        @hit_info = batters_info.order(hit: :asc)[0..2]
-        @ops_info = batters_info.order(ops: :asc)[0..2]
-   end
+        @era_info = PitcherRecord.order(era: :asc)[0..2]
+        @hold_info = PitcherRecord.order(hold: :desc)[0..2]
+        @save_info = PitcherRecord.order(save_num: :desc)[0..2]
+        @win_info = PitcherRecord.order(win: :desc)[0..2]
+        @batting_rate_info = BatterRecord.order(rate: :desc)[0..2]
+        @batting_number_info = BatterRecord.order(number: :desc)[0..2]
+        @hit_info = BatterRecord.order(hit: :desc)[0..2]
+        @ops_info = BatterRecord.order(ops: :desc)[0..2]
+    end
     
     #成績ページのデータの再取得
     def reload
@@ -21,8 +20,8 @@ class RecordsController < ApplicationController
         batter_all_records = get_batter_all_records
 
         #DBに成績データ格納
-        save_PitcherRecord(pitcher_all_records)
-        save_BatterRecord(batter_all_records)
+        save_pitchers_info(pitcher_all_records)
+        save_batters_info(batter_all_records)
         
         redirect_to action: :index
 

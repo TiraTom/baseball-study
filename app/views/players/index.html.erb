@@ -2,5 +2,5 @@
 
 <% @all_players.each do |player| %>
 	<!-- image link -->
-	<% link_to #{player.name}, player_path, %>
+	<%= link_to player.name, players_path(player) %>
 <% end %>
