@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180204115029) do
+ActiveRecord::Schema.define(version: 20180213140910) do
 
-  create_table "batter_records", force: :cascade do |t|
+  create_table "BatterRecord", force: :cascade do |t|
     t.string "name", null: false
     t.float "rate", default: 0.0
     t.integer "number", default: 0
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20180204115029) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pitcher_records", force: :cascade do |t|
+  create_table "PitcherRecord", force: :cascade do |t|
     t.string "name", null: false
     t.float "era", default: 999.0
     t.integer "hold", default: 0
@@ -32,10 +32,61 @@ ActiveRecord::Schema.define(version: 20180204115029) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "players", force: :cascade do |t|
+  create_table "Player", force: :cascade do |t|
     t.string "name", null: false
     t.string "img"
     t.integer "enterYear", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "batter_records", force: :cascade do |t|
+    t.string "name", null: false
+    t.float "rate", default: 0.0
+    t.integer "number"
+    t.integer "hit", default: 0
+    t.float "ops", default: 0.0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "batter_statuses", force: :cascade do |t|
+    t.string "name", null: false
+    t.float "rate", default: 0.0
+    t.integer "number"
+    t.integer "hit", default: 0
+    t.float "opt", default: 0.0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pitcher_records", force: :cascade do |t|
+    t.string "name", null: false
+    t.float "era", default: 999.0
+    t.integer "hold", default: 0
+    t.integer "save_num", default: 0
+    t.float "win", default: 0.0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pitcher_statuses", force: :cascade do |t|
+    t.string "name", null: false
+    t.float "era", default: 999.0
+    t.integer "hold", default: 0
+    t.integer "save_num", default: 0
+    t.float "win", default: 0.0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "number", null: false
+    t.integer "price", default: 0
+    t.string "position"
+    t.integer "bat", default: 0
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -12,19 +12,19 @@ class RecordsController < ApplicationController
         @batting_number_info = batters_info.order(number: :asc)[0..2]
         @hit_info = batters_info.order(hit: :asc)[0..2]
         @ops_info = batters_info.order(ops: :asc)[0..2]
-    end
+   end
     
     #成績ページのデータの再取得
     def reload
         #ページ全体のデータ取得
         pitcher_all_records = get_pitcher_all_records
         batter_all_records = get_batter_all_records
-        
+
         #DBに成績データ格納
-        save_pitchers_info(pitcher_all_records)
-        save_batters_info(batter_all_records)
+        save_PitcherRecord(pitcher_all_records)
+        save_BatterRecord(batter_all_records)
         
-        redirect_to :index
+        redirect_to action: :index
 
     end
 end

@@ -2,10 +2,16 @@
 
 one:
   name: MyString
-  img: MyString
-  enterYear: 1
+  number: 
+  price: 
+  position: MyString
+  bat: 
+  image: MyString
 
 two:
   name: MyString
-  img: MyString
-  enterYear: 1
+  number: 
+  price: 
+  position: MyString
+  bat: 
+  image: MyString
